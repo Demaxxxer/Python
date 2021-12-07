@@ -55,12 +55,12 @@ def dekod(zprava):
     return rozsifra
  
 def main():
-    zprava = "Ahoj svete."
-    vyslednazprava = kod(zprava.upper())
-    print (vyslednazprava)
- 
-    zprava = ".- .... --- .---  ... ...- . - . .-.-.-"
-    vyslednazprava = dekod(zprava)
+    zprava = "AHOJ SVETE."
+    if ('.' in zprava[0:1] or '-' in zprava[0:1]):
+        vyslednazprava = dekod(zprava)
+    else:
+        vyslednazprava = kod(zprava.upper())
+        
     print (vyslednazprava)
  
 if __name__ == '__main__':
